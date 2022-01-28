@@ -1,3 +1,5 @@
+/* Prefix Sum in 1-D array */
+
 #include<iostream>
 using namespace std ;
 int main(){
