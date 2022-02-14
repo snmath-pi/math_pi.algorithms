@@ -14,7 +14,7 @@ int main(){
                 swap(ar[j],ar[j+1]) ;
         }
     }
-    printarray(ar,n) ;
+    printarray(ar,n);
 
     
 }
