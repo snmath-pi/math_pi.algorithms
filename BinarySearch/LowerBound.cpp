@@ -7,7 +7,7 @@ int main() {
 	int x ;
 	cin >> x ;
 	long long ans = 1e18 ;
-	while(r - l > 0){
+	while(r - l >= 0){
 		long long mid = l + (r-l) / 2 ;
 		if(v[mid] >= x) {
 			ans = min(ans,v[mid]) ;
