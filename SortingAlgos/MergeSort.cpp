@@ -75,6 +75,8 @@ void Merge(int *a , int l , int m , int r ){
 	delete[] leftA ;
 	delete[] rightA ;
 }
+// Based on divide and conquer strategy 
+// O(nlogn) -> best and worst cases both 
 void MergeSort(int *a , int l , int r ){
 	if(l <r ){
 		int m = (l + r) >> 1 ;
