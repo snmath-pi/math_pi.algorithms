@@ -1,6 +1,7 @@
 #include<iostream> 
 #include<vector> 
 #include<queue> 
+#include<algorithm>
 using namespace std ;
 vector<vector<int>> adj ;
 
@@ -27,6 +28,23 @@ void bfs(int S ) {
 	}
 
 }
+
+void path(int S, int u) {
+	if(!used[u]) {
+		cout << "No path exists\n" ;
+		return ;
+	} else{
+		vector<int> path ;
+		for(int v = u; v!= -1; v = p[v]) {
+			path.push_back(v) ;
+		}
+		reverse(path.begin(), path.end()) ;
+		for (int v :path) {
+			cout << v << " " ; 
+		}
+
+	}
+}
 int main() {
 	int N ;
 	cin >> N ;
@@ -50,4 +68,6 @@ int main() {
 	cout << "\n" ;
 	// Steps 
 	for(auto x:d) cout << x << " " ;
+	cout << "\n" ;
+	path(0, 5) ;
 }
