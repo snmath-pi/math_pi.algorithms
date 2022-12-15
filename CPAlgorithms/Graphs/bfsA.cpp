@@ -5,13 +5,13 @@ using namespace std ;
 vector<vector<int>> adj ;
 
 vector<bool> used ;
-// vector<int> d(N), p(N) ;
+vector<int> d, p ;
 void bfs(int S ) {
 	// vector<bool> used(N, false) ;
 	queue<int> q ;
 	q.push(S) ;
 	used[S] = true ;
-	// p[S] = -1 ;
+	p[S] = -1 ;
 	while(!q.empty()) {
 		int v = q.front() ;
 		q.pop() ;
@@ -20,8 +20,8 @@ void bfs(int S ) {
 			if(!used[x]) {
 				q.push(x) ;
 				used[x] = true ;
-				// p[x] = v;
-				// d[x] = 1 + d[v] ;
+				p[x] = v;
+				d[x] = 1 + d[v] ;
 			}
 		}
 	}
@@ -34,6 +34,7 @@ int main() {
 	cin >> M ;
 	used.assign(N, false) ;
 	adj.assign(N, vector<int>()) ;
+	d.resize(N), p.resize(N) ;
 	for(int i=0; i<M; i++){
 		int u, v ;
 		cin >> u >> v ;
@@ -46,4 +47,7 @@ int main() {
 			bfs(i) ;
 		}
 	}
+	cout << "\n" ;
+	// Steps 
+	for(auto x:d) cout << x << " " ;
 }
