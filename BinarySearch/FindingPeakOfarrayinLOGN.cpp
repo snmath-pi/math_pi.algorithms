@@ -23,7 +23,7 @@ int main() {
     ios::sync_with_stdio(0);
     cin.tie(0);
     // int a[] = {1, 2, 2, 2, 3, 4, 4, 4, 4, 3, 2, 1}; // very bad array example but okay
-    int a[] = {6, 10, 14123, 1235352, 1, 12}; // a nice peak array :)
+    int a[] = {6, 10, 14123, 1235352, 12, 1}; // a nice peak array :)
 
     int n = sizeof(a) / sizeof(a[0]);
     int l = 0, r = sizeof(a) / sizeof(a[0]) - 1;
