@@ -24,7 +24,7 @@ vector<vl> dp1(N, vl(N, inf)), dp2(N, vl(N, inf));
 
 struct FlyodWarshallAPSP{
     // for non - negative weight edges
-    void f() {
+    void f(int n) {
         for(int k=0; k<n; k++) {
             for(int i=0; i<n; i++) {
                 for(int j=0; j<n; j++) {
@@ -33,7 +33,7 @@ struct FlyodWarshallAPSP{
             }
         }
     }
-    void fneg() {
+    void fneg(int n) {
         for(int k=0; k<n; k++) {
             for(int i=0; i<n; i++) {
                 for(int j=0; j<n; j++) {
