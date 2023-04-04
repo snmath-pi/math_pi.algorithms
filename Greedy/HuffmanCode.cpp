@@ -85,11 +85,11 @@ int main() {
 	cin.tie(0);
 
 	char arr[] = {'a', 'b', 'c', 'd', 'e', 'f'};
-    int freq[] = {5, 9, 12, 13, 16, 45};
+    	int freq[] = {5, 9, 12, 13, 16, 45};
  
-    int size = sizeof(arr) / sizeof(arr[0]);
+    	int size = sizeof(arr) / sizeof(arr[0]);
  
-    HUFF(arr, freq, size);
+    	HUFF(arr, freq, size);
 
 	return 0;
 
