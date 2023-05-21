@@ -49,17 +49,6 @@ void yesno(bool a) {
 }
  
 int t, n;
-
-
-void insertion_sort(vi &a, int n) {
-	if(n <= 1) return;
-	insertion_sort(a, n-1);
-
-	int key = a[n-1];
-	int j = n - 2;
-	while(j >= 0 and a[j] > key) a[j+1] = a[j], j--;
-	a[j + 1] = key;
-}
 int main() {
     ios::sync_with_stdio(0);
     cin.tie(0);
