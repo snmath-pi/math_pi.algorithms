@@ -80,7 +80,8 @@ void yesnos(bool a) {
  
 int t, n, m;
 int tt;
-vi ap, disc, low;
+vi disc, low; vi ap;
+vector<pii> bridges;
 vvi g;
 int dfs(int u, int p) {
     int children = 0;
@@ -90,6 +91,7 @@ int dfs(int u, int p) {
         if(!disc[v]) {
             children++;
             dfs(v, u);
+            if(disc[u] < disc[v]) bridges.pb(mpr(u, v));
             if(disc[u] <= disc[v]) 
                 ap[u] = 1;
             low[u] = min(low[u], low[v]);
@@ -124,5 +126,8 @@ int main() {
     }
 
     Articulation_Points();
-    rep(i, n) cout << ap[i] << sp;
+    rep(i, n) cout << ap[i] << sp; cout << nl;
+    for(auto x: bridges) {
+        cout << x.fi << sp << x.se << nl;
+    }
 }
